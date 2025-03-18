@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables</title>
+    <title>Quations & Answers</title>
 </head>
 <body>
     <h1>(1) What is php?</h1>
@@ -118,4 +118,4 @@
     <h1>(55) What is the difference between array_replace and array_replace_recursive in PHP ?</h1>
     <h2> => array_replace is used to replace the values of the first array with the values from following arrays. array_replace_recursive is used to replace the values of the first array with the values from following arrays recursively.</h2>
 </body>
-</html>m
+</html>
