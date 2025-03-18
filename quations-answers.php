@@ -3,69 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custome-style.css"></link>
     <title>Quations & Answers</title>
 </head>
 <body>
-    <h1>(1) What is php?</h1>
-    <h2> => PHP (Hypertext Preprocessor) is a server-side scripting language used for web development to 
-        create dynamic and interactive web pages.</h2>
-    <h1>(2) Whats is variables ?</h1>
-    <h2> => Variables are used to store information to be referenced and manipulated in a computer program.</h2>
-    <h1>(3) How to declare a variable in PHP ?</h1>
-    <h2> => In PHP, a variable starts with the $ sign, followed by the name of the variable.</h2>
-    <h1>(4) How to assign a value to a variable in PHP ?</h1>
-    <h2> => In PHP, a variable is assigned with the = sign, followed by the value of the variable.</h2>
-    <h1>(5) How to display the value of a variable in PHP ?</h1>
-    <h2> => In PHP, a variable is displayed with the echo or print statement.</h2>
-    <h1>(6) What is the difference between echo and print in PHP ?</h1>
-    <h2> => echo and print are more or less the same. They are both used to output data to the screen. The differences are small: echo has no return value while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters (although such usage is rare) while print can take one argument. echo is marginally faster than print.</h2>
-    <h1>(7) What is the difference between single quotes and double quotes in PHP ?</h1>
-    <h2> => In PHP, single quoted strings will display things almost completely "as is." Variables and most escape sequences will not be interpreted. Double quotes will display a host of escaped characters (including some regexes), and variables in the strings will be evaluated.</h2>
-    <h1>(8) What is the difference between == and === in PHP ?</h1>
-    <h2> => == is an equal comparison operator that compares two values and returns true if they are equivalent or false otherwise. === is an identical comparison operator that compares two values and returns true if they are equal and of the same type.</h2>
-    <h1>(9) What is the difference between $a++ and ++$a in PHP ?</h1>
-    <h2> => $a++ is a post-increment operator that increments the value of $a after the current statement has been executed. ++$a is a pre-increment operator that increments the value of $a before the current statement is executed.</h2>
-    <h1>(10) What is the difference between include and require in PHP ?</h1>
-    <h2> => include and require are both used to include a file in the current file. The difference is that if the file to be included is not found by require, it will cause a fatal error and halt the execution of the script. If the file to be included is not found by include, a warning will be issued, but the script will continue to execute.</h2>
-    <h1>(11) What is the difference between include_once and require_once in PHP ?</h1>
-    <h2> => include_once and require_once are both used to include a file in the current file. The difference is that if the file to be included has already been included, include_once will not include it again, but require_once will include it again.</h2>
-    <h1>(12) What is the difference between unset and unlink in PHP ?</h1>
-    <h2> => unset is used to destroy a variable. unlink is used to delete a file.</h2>
-    <h1>(13) What is the difference between session and cookie in PHP ?</h1>
-    <h2> => The main difference between sessions and cookies is that sessions are stored on the server, and cookies are stored on the user's computer. Sessions are more secure than cookies because the user cannot manipulate them from the client side.</h2>
-    <h1>(14) What is the difference between GET and POST in PHP ?</h1>
-    <h2> => GET and POST are two methods to send data from a form to a server. GET sends the data in the URL, while POST sends the data in the HTTP request body. GET is less secure than POST because the data sent is part of the URL. GET is limited to send upto 2048 characters. POST does not have any restriction on data size to be sent. GET can be bookmarked. GET should never be used when dealing with sensitive data. GET is ideal for non-secure data, like query strings in Google.</h2>
-    <h1>(15) What is the difference between array_merge and array_combine in PHP ?</h1>
-    <h2> => array_merge is used to merge two or more arrays into a single array. array_combine is used to create an array by using one array for keys and another for its values.</h2>
-    <h1>(16) What is the difference between array_push and array_pop in PHP ?</h1>
-    <h2> => array_push is used to add one or more elements to the end of an array. array_pop is used to remove the last element of an array.</h2>
-    <h1>(17) What is the difference between array_shift and array_unshift in PHP ?</h1>
-    <h2> => array_shift is used to remove the first element of an array. array_unshift is used to add one or more elements to the beginning of an array.</h2>
-    <h1>(18) What is the difference between array_key_exists and in_array in PHP ?</h1>
-    <h2> => array_key_exists is used to check if a specified key is present in an array. in_array is used to check if a specified value is present in an array.</h2>
-    <h1>(19) What is the difference between array_map and array_walk in PHP ?</h1>
-    <h2> => array_map is used to apply a callback function to each element of an array and return the modified array. array_walk is used to apply a callback function to each element of an array but does not return the modified array.</h2>
-    <h1>(20) What is the difference between array_search and array_find in PHP ?</h1>
-    <h2> => array_search is used to search an array for a specified value and return its key. array_find is used to search an array for a specified value and return the value.</h2>
-    <h1>(21) What is the difference between array_reverse and array_flip in PHP ?</h1>
-    <h2> => array_reverse is used to reverse the order of elements in an array. array_flip is used to exchange the keys with their associated values in an array.</h2>
-    <h1>(22) What is the difference between array_slice and array_splice in PHP ?</h1>
-    <h2> => array_slice is used to extract a slice of an array. array_splice is used to remove a portion of an array and replace it with something else.</h2>
-    <h1>(23) What is the difference between array_unique and array_values in PHP ?</h1>
-    <h2> => array_unique is used to remove duplicate values from an array. array_values is used to return all the values of an array.</h2>
-    <h1>(24) What is the difference between array_rand and shuffle in PHP ?</h1>
-    <h2> => array_rand is used to pick one or more random keys from an array. shuffle is used to shuffle the elements of an array.</h2>
-    <h1>(25) What is the difference between array_sum and array_product in PHP ?</h1>
-    <h2> => array_sum is used to calculate the sum of all the values in an array. array_product is used to calculate the product of all the values in an array.</h2>
-    <h1>(26) What is the difference between array_count_values and array_column in PHP ?</h1>
-    <h2> => array_count_values is used to count all the values of an array. array_column is used to return the values from a single column in an array.</h2>
-    <h1>(27) What is the difference between array_chunk and array_combine in PHP ?</h1>
-    <h2> => array_chunk is used to split an array into chunks. array_combine is used to create an array by using one array for keys and another for its values.</h2>
-    <h1>(28) What is the difference between array_diff and array_diff_assoc in PHP ?</h1>
-    <h2> => array_diff is used to compare two or more arrays and return the differences. array_diff_assoc is used to compare two or more arrays and return the differences with keys.</h2>
-    <h1>(29) What is the difference between array_fill and array_fill_keys in PHP ?</h1>
-    <h2> => array_fill is used to fill an array with values. array_fill_keys is used to fill an array with values, specifying keys.</h2>
-    <h1>(30) What is the difference between array_intersect and array_intersect_assoc in PHP ?</h1>
+    <div class="container">
+        <div class="question">
+            <h1><span class="question-number">(1)</span> What is PHP?</h1>
+            <h2>PHP (Hypertext Preprocessor) is a server-side scripting language used for web development to create dynamic and interactive web pages.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(2)</span> What is the full form of PHP?</h1>
+            <h2>PHP stands for Hypertext Preprocessor.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(3)</span> What is the latest version of PHP?</h1>
+            <h2>The latest version of PHP is PHP 8.0.0.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(4)</span> How to declare a variable in PHP ?</h1>
+            <h2>In PHP, a variable starts with the $ sign, followed by the name of the variable.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(5)</span> What is the file extension of PHP files?</h1>
+            <h2>The file extension of PHP files is .php.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(6)</span> How to assign a value to a variable in PHP ?</h1>
+            <h2>In PHP, a variable is assigned with the = sign, followed by the value of the variable.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(7)</span> How to display the value of a variable in PHP ?</h1>
+            <h2>In PHP, a variable is displayed with the echo or print statement.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(8) What is the difference between echo and print in PHP ?</span> </h1>
+            <h2>echo outputs one or more strings, while print outputs a single string and returns a value of 1.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(9)</span> What is the difference between single quotes and double quotes in PHP ?</h1>
+            <h2>In PHP, single-quoted strings display text as-is, without parsing variables or escape sequences (except for \\ and \'). Double-quoted strings parse variables and special escape sequences.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(10)</span> What is the difference between == and === in PHP ?</h1>
+            <h2>== compares values for equality, while === compares both values and types for equality.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(11)</span> What is the difference between $a++ and ++$a in PHP ?</h1>
+            <h2>$a++ is a post-increment operator that increments the value of $a after the current statement has been executed. ++$a is a pre-increment operator that increments the value of $a before the current statement is executed.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(12)</span> What is the difference between include and require in PHP ?</h1>
+            <h2>include and require both include a file in the current script. require causes a fatal error if the file is not found, while include only issues a warning and continues execution.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(13)</span> What is the difference between include_once and require_once in PHP ?</h1>
+            <h2>include_once and require_once both include a file only once. If the file has already been included, they will not include it again.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(14)</span> What is the difference between unset and unlink in PHP ?</h1>
+            <h2>unset is used to destroy a variable. unlink is used to delete a file.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(15)</span> What is the difference between session and cookie in PHP ?</h1>
+            <h2>The main difference between sessions and cookies is that sessions are stored on the server, and cookies are stored on the user's computer. Sessions are more secure than cookies because the user cannot manipulate them from the client side.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(16)</span> What is the difference between GET and POST in PHP ?</h1>
+            <h2>GET sends data via URL, while POST sends data in the request body. GET is less secure and has size limits, whereas POST is more secure and has no size limits.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(17)</span> What is the difference between array_merge and array_combine in PHP ?</h1>
+            <h2>array_merge is used to merge two or more arrays into a single array. array_combine is used to create an array by using one array for keys and another for its values.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(18)</span> What is the difference between array_push and array_pop in PHP ?</h1>
+            <h2>array_push is used to add one or more elements to the end of an array. array_pop is used to remove the last element of an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(19)</span>  What is the difference between array_shift and array_unshift in PHP ?</h1>
+            <h2>array_shift is used to remove the first element of an array. array_unshift is used to add one or more elements to the beginning of an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(20)</span> What is the difference between array_key_exists and in_array in PHP ?</h1>
+            <h2>array_key_exists is used to check if a specified key is present in an array. in_array is used to check if a specified value is present in an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(21)</span> What is the difference between array_map and array_walk in PHP ?</h1>
+            <h2>array_map is used to apply a callback function to each element of an array and return the modified array. array_walk is used to apply a callback function to each element of an array but does not return the modified array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(22)</span> What is the difference between array_search and array_find in PHP ?</h1>
+            <h2>array_search is used to search an array for a specified value and return its key. array_find is used to search an array for a specified value and return the value.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(23)</span>  What is the difference between array_reverse and array_flip in PHP ?</h1>
+            <h2>array_reverse is used to reverse the order of elements in an array. array_flip is used to exchange the keys with their associated values in an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(24)</span> What is the difference between array_slice and array_splice in PHP ?</h1>
+            <h2>array_slice is used to extract a slice of an array. array_splice is used to remove a portion of an array and replace it with something else.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(25)</span> What is the difference between array_unique and array_values in PHP ?</h1>
+            <h2>array_unique is used to remove duplicate values from an array. array_values is used to return all the values of an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(26)</span> What is the difference between array_rand and shuffle in PHP ?</h1>
+            <h2>array_rand is used to pick one or more random keys from an array. shuffle is used to shuffle the elements of an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(27)</span> What is the difference between array_sum and array_product in PHP ?</h1>
+            <h2>array_sum is used to calculate the sum of all the values in an array. array_product is used to calculate the product of all the values in an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(28)</span> What is the difference between array_count_values and array_column in PHP ?</h1>
+            <h2>array_count_values is used to count all the values of an array. array_column is used to return the values from a single column in an array.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(29)</span> What is the difference between array_chunk and array_combine in PHP ?</h1>
+            <h2>array_chunk is used to split an array into chunks. array_combine is used to create an array by using one array for keys and another for its values.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(30)</span> What is the difference between array_diff and array_diff_assoc in PHP ?</h1>
+            <h2>array_diff is used to compare two or more arrays and return the differences. array_diff_assoc is used to compare two or more arrays and return the differences with keys.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(31)</span> What is the difference between array_fill and array_fill_keys in PHP ?</h1>
+            <h2>array_fill is used to fill an array with values. array_fill_keys is used to fill an array with values, specifying keys.</h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(32)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(33)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(34)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(35)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(36)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(37)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(38)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(39)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(40)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(41)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(42)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(43)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(44)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(45)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(46)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(47)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(48)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(49)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(50)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(51)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(52)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(53)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(54)</span> </h1>
+            <h2></h2>
+        </div>
+        <div class="question">
+            <h1><span class="question-number">(55)</span> </h1>
+            <h2></h2>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- <h1>(30) What is the difference between array_intersect and array_intersect_assoc in PHP ?</h1>
     <h2> => array_intersect is used to compare two or more arrays and return the similarities. array_intersect_assoc is used to compare two or more arrays and return the similarities with keys.</h2>
     <h1>(31) What is the difference between array_map and array_filter in PHP ?</h1>
     <h2> => array_map is used to apply a callback function to each element of an array and return the modified array. array_filter is used to filter the elements of an array using a callback function.</h2>
@@ -116,6 +283,4 @@
     <h1>(54) What is the difference between array_map and array_reduce in PHP ?</h1>
     <h2> => array_map is used to apply a callback function to each element of an array and return the modified array. array_reduce is used to reduce an array to a single value using a callback function.</h2>
     <h1>(55) What is the difference between array_replace and array_replace_recursive in PHP ?</h1>
-    <h2> => array_replace is used to replace the values of the first array with the values from following arrays. array_replace_recursive is used to replace the values of the first array with the values from following arrays recursively.</h2>
-</body>
-</html>
+    <h2> => array_replace is used to replace the values of the first array with the values from following arrays. array_replace_recursive is used to replace the values of the first array with the values from following arrays recursively.</h2> -->
