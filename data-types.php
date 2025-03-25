@@ -5,50 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="custome-style.css">
-    </link>
     <title>Data Types</title>
 </head>
 
 <body>
     <div class="container">
+
+        <!-- Question: What are Data Types? -->
         <div class="question">
-            <h1><span class="question-number"></span> What is data types?</h1>
-            <h2>A three types like predefined data types, user defined data types, special(compound) data type</h2>
-            <h2>A predefined data types like integer, float, string, boolean.</h2>
-            <h2>A user defined data types like array and objects.</h2>
-            <h2>A special data types like null resources</h2>
+            <h1><span class="question-number"></span> What are Data Types?</h1>
+            <p>Data types define the type of data a variable can hold. PHP supports various data types, and they are
+                mainly classified into:</p>
+            <ul>
+                <li><strong>Predefined (Primitive) Data Types:</strong> integer, float (double), string, boolean</li>
+                <li><strong>User-defined Data Types:</strong> arrays, objects</li>
+                <li><strong>Special (Compound) Data Types:</strong> null, resource</li>
+            </ul>
         </div>
 
         <?php
-        // Define Data Types
-        $name = "John"; // String
-        $age = 30; // Integer
-        $price = 10.99; // Float
-        $isAdmin = true; // Boolean
+        // Define Variables for Each Data Type
+        $name = "John";            // String
+        $age = 30;                 // Integer
+        $price = 10.99;            // Float
+        $isAdmin = true;           // Boolean
         
-        $fruits = ["apple", "banana", "mango"]; // Array
+        $fruits = ["apple", "banana", "mango"];  // Array
+        
         class Car
         {
-            public $brand;
+            public $brand = "Toyota";            // Object property initialized
         }
-
-        $myCar = new Car(); // Object
+        $myCar = new Car();                      // Object
         
-        $x = null;
-
-        echo "<div class='container'>";
+        $x = null;                               // Null
+        
         echo "<div class='output'>";
-        echo "<h1>Output:</h1>";
-        echo "<p>Name: $name</p>";
-        echo "<p>Age: $age</p>";
-        echo "<p>Price: $price</p>";
-        echo "<p>Is Admin: $isAdmin</p>";
-        echo "<p>Fruits: $fruits[0], $fruits[1], $fruits[2]</p>";
-        echo "<p>Car Brand: $myCar->brand</p>";
-        echo "<p>Null: $x</p>";
-        echo "</div>";
+        echo "<h2>Output:</h2>";
+        echo "<p><strong>Name (String):</strong> $name</p>";
+        echo "<p><strong>Age (Integer):</strong> $age</p>";
+        echo "<p><strong>Price (Float):</strong> $price</p>";
+        echo "<p><strong>Is Admin (Boolean):</strong> " . ($isAdmin ? 'true' : 'false') . "</p>";
+        echo "<p><strong>Fruits (Array):</strong> " . implode(', ', $fruits) . "</p>";
+        echo "<p><strong>Car Brand (Object):</strong> " . $myCar->brand . "</p>";
+        echo "<p><strong>Null Variable:</strong> " . (is_null($x) ? 'NULL' : $x) . "</p>";
         echo "</div>";
         ?>
+
+    </div>
 </body>
 
 </html>
