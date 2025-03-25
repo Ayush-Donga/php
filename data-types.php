@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="question">
-            <h1><span class="question-number">(1)</span> What is data types?</h1>
+            <h1><span class="question-number"></span> What is data types?</h1>
             <h2>A three types like predefined data types, user defined data types, special(compound) data type</h2>
             <h2>A predefined data types like integer, float, string, boolean.</h2>
             <h2>A user defined data types like array and objects.</h2>
